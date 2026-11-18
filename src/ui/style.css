@@ -599,6 +599,56 @@ body {
   }
 }
 
+/* ───────── Guía "Instalar la app" ───────── */
+.guia {
+  z-index: 40;
+}
+.guia-card {
+  max-height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+  -webkit-user-select: text;
+  user-select: text;
+  width: min(560px, 92vw);
+  max-width: 92vw;
+}
+.guia-card .card-title {
+  font-size: clamp(1.2em, 6vw, 1.7em);
+  line-height: 1.15;
+}
+.guia-card .btn {
+  white-space: normal;
+}
+.guia-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.guia-tabs .btn[aria-pressed="true"] {
+  background: var(--yellow);
+}
+.guia-pasos {
+  margin: 0;
+  padding: 0 0 0 1.4em;
+  text-align: left;
+  font-size: clamp(15px, 3.4vh, 20px);
+  line-height: 1.45;
+  font-weight: 700;
+}
+.guia-pasos[hidden] {
+  display: none;
+}
+.guia-pasos li + li {
+  margin-top: 0.35em;
+}
+.guia-nota {
+  font-size: clamp(14px, 3vh, 17px);
+  opacity: 0.85;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .logo,
   .card,
