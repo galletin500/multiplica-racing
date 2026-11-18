@@ -28,4 +28,6 @@ Para el uso y la descripción general, ver [README.md](README.md).
 - **Avisos LF/CRLF** al hacer `git add` en Windows: son informativos, no cambian el contenido.
 - **`npm audit`:** los 5 avisos "high" están solo en herramientas de desarrollo (Vite/Vitest). Las dependencias que se publican no tienen vulnerabilidades. No usar `npm audit fix --force` sin revisarlo antes.
 - **Carpetas generadas** (`node_modules/`, `dist/`) están en `.gitignore`; no subirlas ni editarlas a mano.
+- **Publicación:** repositorio `galletin500/multiplica-racing` en GitHub; Netlify publica `multiplica-racing.netlify.app` en cada `git push` a `main`. Subir cambios publica en la web en vivo: confirmar antes.
+- **Icono y app instalable:** fuentes en `public/icons/icon.svg`; los PNG se generaron con Chrome sin interfaz. Manifiesto en `public/manifest.webmanifest`. Guía de instalación en `src/ui/instalar.ts`. Para probar la versión móvil en el ordenador, Chrome sin interfaz no baja de unos 500 px de ancho: meter la página en un marco de 390 px.
 - **Copia de seguridad inicial:** `multiplica-racing-copia-inicial` en el Escritorio, junto a esta carpeta (sin `node_modules` ni `dist`).
